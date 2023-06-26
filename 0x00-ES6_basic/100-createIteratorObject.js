@@ -16,8 +16,7 @@ export default function createIteratorObject(report) {
       
       return { value: employee, done: false };
     }
-  };
-  
+  };  
   return employeesIterator;
 }
 
