@@ -10,9 +10,3 @@ export default function getResponseFromAPI() {
     }, 2000); // Delay of 2000 milliseconds (2 seconds)
   });
 }
-
-
-import getResponseFromAPI from "./0-promise.js";
-
-const response = getResponseFromAPI();
-console.log(response instanceof Promise);
