@@ -1,5 +1,6 @@
-export default function getResponseFromAPI(){
+export default function getResponseFromAPI() {
 	return new Promise((resolve, reject) => {
+
 		setTimeout(() => {
 			const response = 'This is the response from the API';
 			resolve(response);
