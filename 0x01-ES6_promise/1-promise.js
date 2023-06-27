@@ -1,4 +1,4 @@
-function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) {
     return new Promise((resolve, reject) => {
     // Simulate an async API call or any other async operation
     // using a setTimeout to simulate an async operation
