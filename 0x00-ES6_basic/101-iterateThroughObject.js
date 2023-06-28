@@ -1,15 +1,13 @@
 export default function iterateThroughObject(reportWithIterator) {
-  let result = reportWithIterator.next();
-  let employeesString = '';
+  let output = '';
 
-  while (!result.done) {
-    employeesString += result.value + ' | ';
-    result = reportWithIterator.next();
+  for (const [index, item] of Object.entries(reportWithIterator)) {
+    output += `${item}`;
+
+    if (parseInt(index) !== reportWithIterator.length - 1) {
+      output += ' | ';
+    }
   }
 
-  // Remove the trailing ' | ' from the string
-  employeesString = employeesString.slice(0, -3);
-
-  return employeesString;
+  return output;
 }
-
