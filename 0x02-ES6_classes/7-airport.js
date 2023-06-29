@@ -8,7 +8,7 @@ export default class Airport {
     return this._name;
   }
 
-  get code() {
+  toString() {
     return this._code;
   }
 }
