@@ -25,29 +25,26 @@ export default class HolbertonCourse {
         return this._students
     }
 
-
     /**
      * Set the name of the course
      */
-    set name(newName){
+    set name(newName) {
         if (typeof newName !== 'string') {
             throw Error('Name must be a string');
         }
         this._name = newName;
     }
 
-
     /**
      * Set the lengths of
      */
     set length(newLength) {
-      if (typeof newLength !== 'number') {
-        throw Error('Length must be a number');
-      }  
+        if (typeof newLength !== 'number') {
+            throw Error('Length must be a number');
+        }
 
-      this._length = newLength;
+        this._length = newLength;
     }
-
 
     /**
      * Set the name of the students

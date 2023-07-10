@@ -5,4 +5,3 @@ export default function initializeRooms() {
 
   return sizes.map((size) => new ClassRoom(size));
 }
-
