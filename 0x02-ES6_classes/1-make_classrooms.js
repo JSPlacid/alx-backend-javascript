@@ -7,7 +7,6 @@ export default function initializeRooms() {
   const newList = [class1, class2, class3];
   return (newList);
 }
-
 /*
 import ClassRoom from './0-classroom.js';
 
