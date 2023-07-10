@@ -1,37 +1,30 @@
-import Currency from './3-currency.js';
-
 export default class Pricing {
   constructor(amount, currency) {
-    this._amount = typeof amount === 'number' ? amount : 0;
-    this._currency = currency instanceof Currency ? currency : new Currency('', '');
+    this._amount = amount;
+    this._currency = currency;
   }
 
   get amount() {
     return this._amount;
   }
 
-  set amount(newAmount) {
-    if (typeof newAmount === 'number') {
-      this._amount = newAmount;
-    }
+  set amount(a) {
+    this._amount = a;
   }
 
   get currency() {
     return this._currency;
   }
 
-  set currency(newCurrency) {
-    if (newCurrency instanceof Currency) {
-      this._currency = newCurrency;
-    }
+  set currency(c) {
+    this._currency = c;
   }
 
   displayFullPrice() {
-    return `${this._amount} ${this._currency.name} (${this._currency.code})`;
+    return `${this.amount} ${this.currency._name} (${this.currency._code})`;
   }
 
   static convertPrice(amount, conversionRate) {
-    return amount * conversionRate;
+    return (amount * conversionRate);
   }
 }
-
